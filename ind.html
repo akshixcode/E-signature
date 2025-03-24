@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Signature App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://example.com/path-to-your-classroom-image.jpg'); /* Replace with your classroom image URL */
+            background-size: cover;
+            background-position: center;
+        }
+        #signature-pad {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+            height: 300px;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+        }
+        canvas {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+    <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-lg w-96">
+        <h2 class="text-xl font-bold mb-4">E-Signature Application</h2>
+        <div id="signature-pad">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="mt-4 flex justify-between">
+            <button id="clear" class="bg-red-500 text-white px-4 py-2 rounded">Clear</button>
+            <button id="save" class="bg-blue-500 text-white px-4 py-2 rounded">Save</button>
+        </div>
+        <div id="signature-output" class="mt-4 hidden">
+            <h3 class="font-bold">Your Signature:</h3>
+            <img id="signature-image" src="" alt="Signature" class="mt-2">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
